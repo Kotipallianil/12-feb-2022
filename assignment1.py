@@ -1,0 +1,29 @@
+rice=1800
+oil=15190
+chips=1200
+drinks=500
+brushs=150
+cname=input('enter customer name: ')
+cnum=input('enter customer phone number: ')
+rq=int(input('enter no of rice packets: '))
+oq=int(input('enter no of oil packets: '))
+cq=int(input('enter no of chips packets: '))
+dq=int(input('enter no of  drinks packets: '))
+bq=int(input('enter no of brushs packets: '))
+bill=(rice*rq)+(oil*oq)+(chips*cq)+(drinks*dq)+(brushs*bq)
+if bill>=5000:
+      dis=bill*10/100
+      tax=0
+if bill>=3000:
+     dis=bill*8/100
+     tax=0
+elif bill>=2000:
+     dis=bill*5/100
+     if bill>=1000:
+         dis=bill*3/100
+         if bill>=3000:
+             tax=bill*10/100
+else:
+     tax=bill*18/100
+mainbill=bill-dis+tax
+print('bill amount: ', mainbill)
